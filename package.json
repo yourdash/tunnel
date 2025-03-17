@@ -1,6 +1,6 @@
 {
   "name": "@yourdash/tunnel",
-  "version": "0.1.1",
+  "version": "0.1.4",
   "description": "",
   "scripts": {
     "dev-compile": "vite build --watch",
@@ -10,11 +10,16 @@
   "keywords": [],
   "author": "Ewsgit",
   "license": "MIT",
-  "main": "dist/tunnel.js",
-  "types": "dist/tunnel.d.ts",
   "type": "module",
+  "files": [
+    "dist"
+  ],
   "exports": {
-    ".": "./dist/tunnel.js"
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "import": "./dist/src/index.mjs",
+      "default": "./dist/src/index.mjs"
+    }
   },
   "dependencies": {
     "babel-plugin-react-compiler": "19.0.0-beta-e1e972c-20250221",
